@@ -111,11 +111,19 @@ paths:
         collectionFormat: "multi"
         x-examples:
           application/json: |-
-            {
-              "data": {
-                      "database": "masterinformation"
+              {
+                  "data": {
+                    "table": "employee",
+                    "column": [{
+                      "first": "varchar(30) not null"
+                    }, {
+                      "second": "int not null"
+                    }],
+                    "properties": [{
+                      "primary": "second,first"
+                    }]
+                  }
               }
-            }
       responses:
         "200":
           description: "successful operation"
@@ -123,10 +131,16 @@ paths:
             type: "array"
             items:
               $ref: "#/definitions/Pet"
-            example: |
-              <?xml version="1.0" encoding="UTF-8">
-                ...
-              </xml>
+          examples:
+            application/json: |-
+              {
+                "Status":"success",
+                "Data":{
+                    "Locker":{}
+                }
+              }
+        "400":
+          description: "Invalid status value"
       security:
       - petstore_auth:
         - "write:pets"
