@@ -109,21 +109,6 @@ paths:
           - "sold"
           default: "available"
         collectionFormat: "multi"
-        x-examples:
-          application/xml: |-
-              {
-                  "data": {
-                    "table": "employee",
-                    "column": [{
-                      "first": "varchar(30) not null"
-                    }, {
-                      "second": "int not null"
-                    }],
-                    "properties": [{
-                      "primary": "second,first"
-                    }]
-                  }
-              }
       responses:
         "200":
           description: "successful operation"
