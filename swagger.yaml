@@ -132,13 +132,10 @@ paths:
             items:
               $ref: "#/definitions/Pet"
           examples:
-            application/json: |-
-              {
-                "Status":"success",
-                "Data":{
-                    "Locker":{}
-                }
-              }
+            application/xml: |-
+              <?xml version="1.0" encoding="UTF-8">
+                ...
+              </xml>
         "400":
           description: "Invalid status value"
       security:
