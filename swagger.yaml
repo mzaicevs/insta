@@ -110,7 +110,7 @@ paths:
           default: "available"
         collectionFormat: "multi"
         x-examples:
-          application/json: |-
+          application/xml: |-
               {
                   "data": {
                     "table": "employee",
